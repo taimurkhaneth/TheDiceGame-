@@ -6,6 +6,7 @@ Two-Player Mode: Challenge a friend and see who can roll the highest number.
 Interactive Interface: Easy-to-use buttons to roll the dice and display the results instantly.
 Stylish Design: Modern and sleek UI with appealing color schemes and fonts.
 Responsive Layout: Optimized for different screen sizes, ensuring a smooth experience on both desktop and mobile devices.
+<br>
 How to Play:
 Player 1 clicks the "Play Now" button to roll their dice.
 Player 2 clicks the "Play Now" button to roll their dice.
