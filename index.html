@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game | Play Fun Online Dice Games</title>
+    <meta name="description"
+        content="Play the Dice Game online. Enjoy a fun and interactive way to play dice with friends. Perfect for game night!">
+    <meta name="keywords"
+        content="dice game, online dice game, play dice online, fun games, multiplayer games, game night">
+    <meta name="author" content="Taimurk">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Major+Mono+Display&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Major Mono Display", monospace;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #151515;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            width: 100%;
+            gap: 20px;
+        }
+
+        .container {
+            height: 80%;
+            width: 40%;
+            background-color: #EEEEEE;
+            border: 10px solid #A91D3A;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 2px 0px 10px 0px #A91D3A;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-family: "Jacquard 12", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 3rem;
+        }
+
+        h2 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #A91D3A;
+            color: #EEEEEE;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        button:hover {
+            background-color: #ffffff;
+            color: #A91D3A;
+            border: #A91D3A 2px solid;
+        }
+
+        .dice-image {
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+        }
+
+        header {
+            background-color: #A91D3A;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 0%;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer {
+            background-color: #A91D3A;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>The Dice Game</h1>
+        <nav>
+            <ul>
+                <li><a href="https://taimurk.com" target="_blank">Contact Now</a></li>
+                <li><a href="https://taimurk.com" target="_blank">Creator</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="container" id="player1">
+            <h2>Player 1</h2>
+            <button onclick="rollDice('player1')">Play Now</button>
+            <img class="dice-image" id="dice1" src="1.png" alt="Player 1 Dice">
+        </div>
+        <div class="container" id="player2">
+            <h2>Player 2</h2>
+            <button onclick="rollDice('player2')">Play Now</button>
+            <img class="dice-image" id="dice2" src="1.png" alt="Player 2 Dice">
+        </div>
+    </div>
+    <footer>
+        <p style="color: white; text-align: center;">Made with 💛 by Taimurk.</p>
+    </footer>
+
+    <script>
+        function rollDice(player) {
+            var randomNumber = Math.floor(Math.random() * 6) + 1;
+
+            if (player === 'player1') {
+                document.getElementById('dice1').src = `${randomNumber}.png`;
+                document.getElementById('dice1').alt = `Dice shows ${randomNumber}`;
+            } else if (player === 'player2') {
+                document.getElementById('dice2').src = `${randomNumber}.png`;
+                document.getElementById('dice2').alt = `Dice shows ${randomNumber}`;
+            } else {
+                console.error('Invalid player');
+            }
+        }
+    </script>
+</body>
+
+</html>
